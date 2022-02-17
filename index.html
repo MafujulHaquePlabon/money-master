@@ -23,15 +23,15 @@
                 <img class="w-100 h-100" src="image/equipmentPicture.jpg" alt="">
             </div>  
 
-            <div class="col-md-5 col-12 bg-light d-flex justify-content-center py-4   ">
+            <div class="col-md-5 col-12 bg-light d-flex justify-content-center py-4  ">
                <div class="text-center">
                 <h5 class="fw-bolder mb-3">Income</h5>
-                <p class="pe-3">Income: <input id="income-input" class="input-one rounded border-0"  type="text" name="" id=""> </p>
+                <p class="pe-3">Income: <input id="income-input" id="error" class="input-one rounded border-0 "  type="text" name="" id=""> </p>
                 <h5 class="fw-bolder mb-3">Expenses</h5>
                 <p>Food: <input id="food-input" class="input-one rounded border-0" type="text" name="" id=""> </p>
                 <p class="ps-1">Rent: <input id="rent-input" class="input-one rounded border-0" type="text" name="" id=""> </p>
                 <p class="pe-3">Clothes: <input id="clothes-input" class="input-one rounded border-0" type="text" name="" id=""> </p>
-                <button id="calculate-button" class="bg-success text-white fw-bolder mb-3 px-5 py-1 rounded border-0" type="submit">Calculate</button>
+                <button onclick="verifyInput()" id="calculate-button" class="bg-success text-white fw-bolder mb-3 px-5 py-1 rounded border-0" type="submit">Calculate</button>
                 <h5  class="fw-bolder mb-3">Total Expenses: <span id="total-expenses">00</span> </h5>
                 <h5 class="fw-bolder mb-3">Balance: <span id="balance" >00</span> </h5>
                 <p><span>Save: </span><input id="save-input" class="input-one rounded w-25 border-0 " type="text" name="" id=""><span> % </span><button id="save-button" class="bg-success text-white fw-bolder mb-3 px-5 py-1 rounded border-0" type="submit">Save</button></p>
@@ -39,6 +39,11 @@
                 <h5 class="fw-bolder">Remaining Balance: <span id="remaining-balance" >00</span> </h5>
                </div>
             </div>
+            <div class="notify-section d-flex justify-content-center mt-5">
+           <div >
+            <p id="notify-fail" class="notify">❌  Please try again</p>
+           </div>
+        </div>
     
         </section>
     </main>
